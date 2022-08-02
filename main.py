@@ -37,7 +37,7 @@ st.image(image)
 
 st.markdown('#  Campus olympics')
 
-st.markdown('#### Departmets Union Sports Club')
+st.markdown('#### Departments Union Sports Club')
 
 
 
