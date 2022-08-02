@@ -129,7 +129,7 @@ else:
 				mail=st.text_input(label='E-mail')
 			with tb2:
 				gen=st.selectbox('Gender',('Male','Female','Transgender'))
-				d = st.date_input( "Date of birt",datetime.date(1999, 1, 1))
+				d = st.date_input( "Date of birth",datetime.date(1999, 1, 1))
 				
 				fac=st.selectbox('Faculty',
 				('Applied Science and Technology','Arts, Education & Music','IMk, Commerce & Law','OrientalStudies','Science','Social Science'))
