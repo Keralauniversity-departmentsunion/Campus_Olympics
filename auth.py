@@ -38,7 +38,7 @@ def check_password():
 
     
 def authenticator():
-	
+	cn=0
 	with st.sidebar.form("reg", clear_on_submit=True):
 	
 		st.write("Admin Login")
