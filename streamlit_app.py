@@ -87,7 +87,7 @@ else:
 		st.markdown('###### Leaderboard - Individual')
 		dpt=df[df['Department']!='']
 		dpt=dpt.groupby(['Name']).sum()['Points'].reset_index().sort_values(by='Points', ascending=False).head(10)
-		st.dataframe(dpt.style.hide_index().background_gradient(cmap='hot'))
+		st.dataframe(dpt.style.hide_index().background_gradient(cmap='autumn'))
 			
 
 		
@@ -99,7 +99,7 @@ else:
 			
 			st.markdown('###### Leaderboard - Faculty wise')
 			facp=df.groupby(['Faculty']).sum()['Points'].reset_index().sort_values(by='Points', ascending=False)
-			st.dataframe(facp.style.background_gradient(cmap='hot'))
+			st.dataframe(facp.style.background_gradient(cmap='autumn'))
 			
 		
 		with c2:
@@ -107,7 +107,7 @@ else:
 			st.markdown('###### Leaderboard - Department wise')
 			dpt=df.groupby(['Department']).sum()['Points'].reset_index().sort_values(by='Points', ascending=False)
 			dpt=dpt.head(10)
-			st.dataframe(dpt[dpt['Department']!=''].style.background_gradient(cmap='hot'))
+			st.dataframe(dpt[dpt['Department']!=''].style.background_gradient(cmap='autumn'))
 			
 
 		
