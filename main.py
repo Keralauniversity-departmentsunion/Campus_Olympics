@@ -4,7 +4,7 @@ st.set_page_config(
      page_title="Campus olympics",
      page_icon="ð§",
      layout="wide",
-     initial_sidebar_state="expanded",
+     initial_sidebar_state= "collapsed",
      menu_items={
          'Get Help': 'https://instagram.com/keralauniversitydsu?igshid=YmMyMTA2M2Y=',
          'Report a bug': "https://www.linkedin.com/in/prabinrajkp18/",
