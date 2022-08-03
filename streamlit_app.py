@@ -39,6 +39,7 @@ st.image(image)
 st.markdown('#  Campus olympics')
 
 st.markdown('#### Departments Union Sports Club')
+st.write('**6 teams | 7 days | 20 events | One excitement**')
 
 
 
