@@ -37,7 +37,7 @@ def check_password():
         return True
 
     
- def authenticator():
+def authenticator():
 	
 	with st.sidebar.form("reg", clear_on_submit=True):
 	
