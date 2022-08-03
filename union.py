@@ -31,9 +31,7 @@ def admin():
 		ev=ev[['Name','Faculty','Department','Position']]
 			
 			
-		bd=ev.style.set_properties(**{'background-color': 'black',
-				                   'color': 'white',
-				                   'border-color': 'Red'}).hide_index().set_caption(str(option)+' result')
+		
 			
 		st.dataframe(ev)
 		
@@ -42,7 +40,7 @@ def admin():
 		st.markdown('###### Leaderboard - Individual')
 		dpt=df[df['Department']!='']
 		dpt=dpt.groupby(['Name']).sum()['Points'].reset_index().sort_values(by='Points', ascending=False).head(10)
-		st.dataframe(dpt.style.hide_index().background_gradient())
+		st.dataframe(dpt.style.hide_index().background_gradient(cmap='hot'))
 			
 
 		
@@ -54,7 +52,7 @@ def admin():
 			
 			st.markdown('###### Leaderboard - Faculty wise')
 			facp=df.groupby(['Faculty']).sum()['Points'].reset_index().sort_values(by='Points', ascending=False)
-			st.dataframe(facp.style.background_gradient())
+			st.dataframe(facp.style.background_gradient(cmap='hot'))
 			
 		
 		with c2:
@@ -62,7 +60,7 @@ def admin():
 			st.markdown('###### Leaderboard - Department wise')
 			dpt=df.groupby(['Department']).sum()['Points'].reset_index().sort_values(by='Points', ascending=False)
 			dpt=dpt.head(10)
-			st.dataframe(dpt[dpt['Department']!=''].style.background_gradient())
+			st.dataframe(dpt[dpt['Department']!=''].style.background_gradient(cmap='hot'))
 		
 		
 
