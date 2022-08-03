@@ -24,6 +24,7 @@ from data import registration
 from auth import check_password
 from union import admin
 from data import reg
+from auth import authenticator
 
 
 
@@ -46,7 +47,7 @@ st.markdown('#### Departments Union Sports Club')
 
 st.write('---')
 
-c=check_password()
+c=authenticator()
 
 if c==True:
 	
