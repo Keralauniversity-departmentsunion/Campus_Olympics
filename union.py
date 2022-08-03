@@ -75,7 +75,7 @@ def admin():
 
 		#name,mob,mail= None
 		with st.form("reg2", clear_on_submit=True):
-			st.write('Athletics registration')
+			st.write('**Athletics registration**')
 			tb1,tb2=st.columns(2)
 		
 			#st.write('name')
