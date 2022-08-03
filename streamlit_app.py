@@ -115,7 +115,7 @@ else:
 			st.dataframe(dpt[dpt['Department']!=''])
 		
 		with c2:
-			fig = px.bar(facp, x="Points", y="Faculty", orientation='h',color='Faculty',width=1000,height=500)
+			fig = px.bar(facp, x="Points", y="Faculty", orientation='h',color='Faculty',width=1000,height=300)
 			fig=fig.update_layout(showlegend=False)
 			st.plotly_chart(fig, use_container_width=True)
 			
