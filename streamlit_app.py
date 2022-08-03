@@ -83,20 +83,13 @@ else:
 				                   'border-color': 'Red'}).hide_index().set_caption(str(option)+' result')
 			
 		st.dataframe(ev)
-		#dfi.export(ev, 'Result.png')
-			
-		#with open("Result.png", "rb") as file: btn = st.download_button(
-				     #label="Download Result",
-				     #data=file,
-				     #file_name="result.png",
-				     #mime="image/png"
-				   #)
+		
 		st.write('---')	       
 		#with c2:
 		st.markdown('###### Leaderboard - Individual')
 		dpt=df[df['Department']!='']
 		dpt=dpt.groupby(['Name']).sum()['Points'].reset_index().sort_values(by='Points', ascending=False).head(10)
-		st.dataframe(dpt)
+		st.dataframe(dpt.style.hide_index().background_gradient())
 			
 
 		
@@ -108,7 +101,7 @@ else:
 			
 			st.markdown('###### Leaderboard - Faculty wise')
 			facp=df.groupby(['Faculty']).sum()['Points'].reset_index().sort_values(by='Points', ascending=False)
-			st.dataframe(facp.style.hide_index().background_gradient())
+			st.dataframe(facp.style.background_gradient())
 			fig = px.bar(facp, x="Points", y="Faculty", orientation='h',color='Faculty',width=1000,height=300)
 			fig=fig.update_layout(showlegend=False)
 			fig.layout.xaxis.fixedrange = True
@@ -121,7 +114,7 @@ else:
 			st.markdown('###### Leaderboard - Department wise')
 			dpt=df.groupby(['Department']).sum()['Points'].reset_index().sort_values(by='Points', ascending=False)
 			dpt=dpt.head(10)
-			st.dataframe(dpt[dpt['Department']!=''])
+			st.dataframe(dpt[dpt['Department']!=''].style.background_gradient())
 			
 
 		
