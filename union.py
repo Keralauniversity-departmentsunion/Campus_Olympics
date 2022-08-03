@@ -8,6 +8,7 @@ import json
 import datetime
 from data import registration
 from data import reg
+import plotly.express as px
 
 
 def admin():
@@ -60,6 +61,11 @@ def admin():
 			
 			st.markdown('###### Leaderboard - Faculty wise')
 			st.dataframe(df.groupby(['Faculty']).sum()['Points'].reset_index().sort_values(by='Points', ascending=False))
+			fig = px.bar(facp, x="Points", y="Faculty", orientation='h',color='Faculty',width=1000,height=300)
+			fig=fig.update_layout(showlegend=False)
+			fig.layout.xaxis.fixedrange = True
+			fig.layout.yaxis.fixedrange = True
+			st.plotly_chart(fig, use_container_width=True)
 		
 		with c2:
 			st.markdown('###### Leaderboard - Department wise')
