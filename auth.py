@@ -52,6 +52,7 @@ def authenticator():
 		del username
 		del password
 		cn=True
+		st.balloons()
 	else:
 		cn=False
 	
