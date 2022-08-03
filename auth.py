@@ -38,7 +38,7 @@ def check_password():
 
     
 def authenticator():
-	cn=0
+	
 	with st.sidebar.form("reg", clear_on_submit=True):
 	
 		st.write("Admin Login")
@@ -57,7 +57,7 @@ def authenticator():
 		
 		cn=False
 		
-	if cn==False:
+	if sub3==True and cn==False:
 		st.sidebar.write("User name or password incorrect")
 	
 	return cn
