@@ -25,6 +25,7 @@ from auth import check_password
 from union import admin
 from data import reg
 from auth import authenticator
+import plotly.express as px
 
 
 
