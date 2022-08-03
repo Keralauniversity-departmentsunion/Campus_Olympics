@@ -109,15 +109,19 @@ else:
 			st.markdown('###### Leaderboard - Faculty wise')
 			facp=df.groupby(['Faculty']).sum()['Points'].reset_index().sort_values(by='Points', ascending=False)
 			st.dataframe(facp)
+			fig = px.bar(facp, x="Points", y="Faculty", orientation='h',color='Faculty',width=1000,height=300)
+			fig=fig.update_layout(showlegend=False)
+			fig.layout.xaxis.fixedrange = True
+			fig.layout.yaxis.fixedrange = True
+			st.plotly_chart(fig, use_container_width=True)
+			
+		
+		with c2:
+			
 			st.markdown('###### Leaderboard - Department wise')
 			dpt=df.groupby(['Department']).sum()['Points'].reset_index().sort_values(by='Points', ascending=False)
 			dpt=dpt.head(10)
 			st.dataframe(dpt[dpt['Department']!=''])
-		
-		with c2:
-			fig = px.bar(facp, x="Points", y="Faculty", orientation='h',color='Faculty',width=1000,height=300)
-			fig=fig.update_layout(showlegend=False)
-			st.plotly_chart(fig, use_container_width=True)
 			
 
 		
