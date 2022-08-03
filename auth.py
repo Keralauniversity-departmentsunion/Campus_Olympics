@@ -35,3 +35,24 @@ def check_password():
     else:
         # Password correct.
         return True
+
+    
+ def authenticator():
+	
+	with st.sidebar.form("reg", clear_on_submit=True):
+	
+		st.write("Admin Login")
+	
+		username=st.text_input(label='User Name')
+		password=st.text_input(label='Password')
+	
+		sub3 = st.form_submit_button(label='Login')
+		
+	if sub3==True and username in st.secrets["passwords"] and password==st.secrets["passwords"][username]:
+		del username
+		del password
+		cn=True
+	else:
+		cn=False
+	
+	return cn
