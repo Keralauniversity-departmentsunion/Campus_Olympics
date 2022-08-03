@@ -44,7 +44,7 @@ def authenticator():
 		st.write("Admin Login")
 	
 		username=st.text_input(label='User Name')
-		password=st.text_input(label='Password')
+		password=st.text_input(label='Password',type="password")
 	
 		sub3 = st.form_submit_button(label='Login')
 		
