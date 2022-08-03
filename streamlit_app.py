@@ -47,7 +47,7 @@ st.markdown('#### Departments Union Sports Club')
 
 st.write('---')
 
-c=authenticator()
+c=check_password()
 
 if c==True:
 	
