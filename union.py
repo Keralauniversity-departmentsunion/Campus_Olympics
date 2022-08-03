@@ -16,7 +16,7 @@ def admin():
 	tab1, tab2,tab3,tab4 = st.tabs(["Event Wise Result","Leader Board","Registration",'Admin Access'])
 
 	df=athletics()
-	ev=df['Event'].unique()
+	evn=df['Event'].unique()
 
 	with tab1:
 
