@@ -54,7 +54,7 @@ def authenticator():
 		cn=True
 		st.balloons()
 	else:
-		st.write("User name or password incorrect")
+		st.sidebar.write("User name or password incorrect")
 		cn=False
 	
 	return cn
