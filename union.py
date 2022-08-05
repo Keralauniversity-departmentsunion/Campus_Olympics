@@ -138,11 +138,10 @@ def admin():
 			if submit2==True:	
 				fc=d[d['faculty']==fac]
 				st.dataframe(fc[['name','mobile','email','event','gender']])
-			
-			
-			
-			
-			#st.dataframe(d)
+				
+		
+		st.write('All Participants')
+		st.dataframe(d)
 		
 		
 		
