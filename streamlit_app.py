@@ -154,7 +154,7 @@ else:
 			
 			for event in items:
 				
-				lst=[name,mob,mail,gen,fac,str(d),event]
+				lst=[name,str(mob),mail,gen,fac,str(d),event]
 				registration(lst)
 				
 with st.sidebar.expander("Developers"):
