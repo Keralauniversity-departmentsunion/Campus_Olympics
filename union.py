@@ -144,7 +144,7 @@ def admin():
 		
 		st.write('All Participants')
 		d.sort_values(by = ['event','gender'],inplace=True)
-		st.dataframe(d)
+		st.dataframe(d[['name','gender','event','faculty','mobile']])
 		
 		
 		
