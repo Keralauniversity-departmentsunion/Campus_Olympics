@@ -128,8 +128,8 @@ def admin():
 				elist=d[(d['event']==Event) & (d['gender']==gen1)]
 				st.dataframe(elist[['name','mobile','email','faculty','age','event']])
 				elist.to_excel('participants_eventwise.xlsx')
-				st.download_button(label='📥 Download Event wise list',data='participants_eventwise.xlsx',
-						   file_name= 'participants_eventwise.xlsx')
+		st.download_button(label='📥 Download Event wise list',data='participants_eventwise.xlsx',
+				   file_name= 'participants_eventwise.xlsx')
 				
 				
 		with st.form('fac'):
