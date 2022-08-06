@@ -37,7 +37,7 @@ def registration(lst):
 	sh = gc.open_by_url(st.secrets['reg'])
 	ws = sh.worksheet('Sheet1')
 	
-	ws.insert_row(lst,2)
+	ws.insert_row(lst,-1)
 	
 	#return None
 
