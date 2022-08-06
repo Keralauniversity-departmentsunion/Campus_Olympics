@@ -10,7 +10,6 @@ from data import registration
 from data import reg
 import plotly.express as px
 
-
 def admin():
 
 	tab1, tab2,tab3,tab4 = st.tabs(["Event Wise Result","Leader Board","Registration",'Admin Access'])
@@ -127,7 +126,11 @@ def admin():
 				
 				st.write('Participants for ' + str(Event)+'-'+str(gen1))
 				elist=d[(d['event']==Event) & (d['gender']==gen1)]
-				st.dataframe(elist[['name','mobile','email','faculty','age']])
+				st.dataframe(elist[['name','mobile','email','faculty','age','event']])
+				elist.to_excel('participants_eventwise.xlsx')
+				st.download_button(label='📥 Download Event wise list',data='participants_eventwise.xlsx',
+						   file_name= 'participants_eventwise.xlsx')
+				
 				
 		with st.form('fac'):
 			st.markdown('#### Faculty Wise Participants')
