@@ -141,10 +141,10 @@ def admin():
 				fc.sort_values(by = ['event','gender'],inplace=True)
 				st.dataframe(fc[['name','mobile','email','event','gender']])
 				
-		
-		st.write('All Participants')
-		d.sort_values(by = ['event','gender'],inplace=True)
-		st.dataframe(d[['name','gender','event','faculty','mobile']])
+		with st.container():
+			st.write('**All Participants**')
+			d.sort_values(by = ['event','gender'],inplace=True)
+			st.dataframe(d[['name','gender','event','faculty','mobile']])
 		
 		
 		
