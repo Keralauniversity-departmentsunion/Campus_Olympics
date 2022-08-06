@@ -126,7 +126,8 @@ def admin():
 				
 				st.write('Participants for ' + str(Event)+'-'+str(gen1))
 				elist=d[(d['event']==Event) & (d['gender']==gen1)]
-				st.dataframe(elist[['name','mobile','email','faculty','age','event']])
+				elist.sort_values(by = ['event','gender'],inplace=True)
+				st.dataframe(elist[['name','mobile','email','faculty','age','event','gender']])
 				
 				
 		with st.form('fac'):
@@ -137,10 +138,12 @@ def admin():
 			
 			if submit2==True:	
 				fc=d[d['faculty']==fac]
+				fc.sort_values(by = ['event','gender'],inplace=True)
 				st.dataframe(fc[['name','mobile','email','event','gender']])
 				
 		
 		st.write('All Participants')
+		d.sort_values(by = ['event','gender'],inplace=True)
 		st.dataframe(d)
 		
 		
