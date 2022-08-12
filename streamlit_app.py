@@ -44,7 +44,7 @@ st.write('**6 teams | 7 days | 20 events | One excitement**')
 
 with open("campus olympics rules.pdf", "rb") as file:
     btn=st.download_button(
-    label="click me to download pdf",
+    label="click here download rules",
     data=file,
     file_name="dowloaded.pdf",
     mime="application/octet-stream"
