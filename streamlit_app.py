@@ -67,7 +67,7 @@ else:
 	
 
 
-	tab1, tab2,tab3,tab4 = st.tabs(["Event Wise Result","Leader Board","Registration","Gallery"])
+	tab1, tab2,tab3 = st.tabs(["Event Wise Result","Leader Board","Registration"])
 
 	df=athletics()
 	evn=df['Event'].unique()
@@ -163,12 +163,7 @@ else:
 				
 				lst=[name,str(mob),mail,gen,fac,str(d),event]
 				registration(lst)
-		with tab4:
-			img=["images/WhatsApp Image 2022-08-27 at 9.18.03 AM (1).jpeg","images/WhatsApp Image 2022-08-27 at 9.18.02 AM.jpeg"]
-			
-			
-			#im=Image.open(image=https://www.instagram.com/p/Chv9XNdrtpY/?utm_source=ig_web_copy_link)
-			st.image(img)
+		
 				
 with st.sidebar.expander("Developers"):
  	st.markdown('#### [Prabin Raj K P](https://www.linkedin.com/in/prabinrajkp18/)')
