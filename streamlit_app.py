@@ -176,8 +176,8 @@ else:
 
 
 			if st.button('Prev'):
-			    if index > 0:
-				index = index -1
+				if index > 0:
+					index = index -1
 
 			image = Image.open(images[index])
 			st.image(image, use_column_width=True)
