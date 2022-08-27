@@ -164,8 +164,8 @@ else:
 				lst=[name,str(mob),mail,gen,fac,str(d),event]
 				registration(lst)
 		with tab4:
-			
-			st.image(image=https://www.instagram.com/p/Chv9XNdrtpY/?utm_source=ig_web_copy_link)
+			im=Image.open('image=https://www.instagram.com/p/Chv9XNdrtpY/?utm_source=ig_web_copy_link')
+			st.image(im)
 				
 with st.sidebar.expander("Developers"):
  	st.markdown('#### [Prabin Raj K P](https://www.linkedin.com/in/prabinrajkp18/)')
