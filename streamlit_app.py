@@ -164,27 +164,11 @@ else:
 				lst=[name,str(mob),mail,gen,fac,str(d),event]
 				registration(lst)
 		with tab4:
-			from PIL import Image
-			import glob
-
-
-			images = glob.glob("Campus_Olympics/images/")
-			index= st.number_input('Index')
-
-			if st.button('Next'):
-			    index+=1
-
-
-			if st.button('Prev'):
-				if index > 0:
-					index = index -1
-
-			image = Image.open(images[index])
-			st.image(image, use_column_width=True)
+			img=["logo.png","splogo3e442.jpeg"]
 			
 			
 			#im=Image.open(image=https://www.instagram.com/p/Chv9XNdrtpY/?utm_source=ig_web_copy_link)
-			#st.image(im)
+			st.image(img)
 				
 with st.sidebar.expander("Developers"):
  	st.markdown('#### [Prabin Raj K P](https://www.linkedin.com/in/prabinrajkp18/)')
