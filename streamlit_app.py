@@ -164,7 +164,7 @@ else:
 				lst=[name,str(mob),mail,gen,fac,str(d),event]
 				registration(lst)
 		with tab4:
-			img=["WhatsApp Image 2022-08-27 at 9.18.03 AM (1).jpeg","WhatsApp Image 2022-08-27 at 9.18.02 AM.jpeg"]
+			img=["images/WhatsApp Image 2022-08-27 at 9.18.03 AM (1).jpeg","images/WhatsApp Image 2022-08-27 at 9.18.02 AM.jpeg"]
 			
 			
 			#im=Image.open(image=https://www.instagram.com/p/Chv9XNdrtpY/?utm_source=ig_web_copy_link)
